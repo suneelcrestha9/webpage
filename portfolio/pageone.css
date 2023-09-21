@@ -1,0 +1,320 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: rgb(204, 218, 209);
+    max-width: 100%;
+    max-height: 100vh;
+}
+.aside-left{
+    margin: 20% 0 0 15%;
+}
+.info h3{
+    font-size: 2.4rem;
+}
+.info h1 {
+    font-size: 3rem;
+    margin-top: -1rem;
+}
+.info h4 {
+    padding: 0.1rem 0.1rem;
+    font-size: 1.5rem;
+    max-width:20rem;
+    background-color: #6F6866;
+    margin-top: -2rem;
+}
+.colored-text{
+    color: #6F6866;
+}
+.info p {
+    text-transform: capitalize;
+    max-width: 75%;
+}
+.more-about button{
+    padding: 1rem 2rem;
+    max-width: 20rem;
+    border-radius: 3rem;
+    background-color: #6F6866;
+    color: white;
+    display: flex;
+    justify-content: center;
+    border: 0;
+    font-size: 1.3rem;
+    cursor: pointer;
+
+}
+.more-about a{
+    color: white;
+}
+
+.image-right{
+    max-width: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+}
+.image-right img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+.icons{
+    position: absolute;
+    top: 23%;
+    right: 1.5%;
+    z-index: 1;
+    max-width: 10rem;
+    background-color: #788585;
+    border-radius: 1rem;
+    background-color: rgba(120, 133, 133, 0.1);
+    backdrop-filter: blur(1rem);
+}
+a{
+    font-size: 2rem;
+    text-decoration: none;
+}
+.icons a img{
+    max-width: 2.5rem;
+    margin: 1rem 1.5rem;
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+.icons img{
+    border-radius: 50%;
+}
+.tiktok img:hover{
+    box-shadow: 0 0 20px rgba(239, 89, 8, 0.9);
+}
+.facebook img:hover {
+    box-shadow: 0 0 20px rgba(8, 54, 239, 0.9);
+}
+.instagram img:hover{
+    box-shadow: 0 0 20px rgba(161, 5, 62, 0.9)
+}
+.linkedin img:hover {
+    box-shadow: 0 0 20px rgba(1, 47, 254, 0.9)
+}
+.burgerlist{
+    display: none;
+    width: 1.7rem;
+    height: 1.7rem;
+    content: "";
+    position: absolute;
+    top: 1rem;
+    right:1rem;
+    z-index: 2;
+}
+.burgerlist>*{
+    background-color: black;
+    content: "";
+    margin: 0.2rem 0rem;
+    width: 100%;
+    height: 0.35rem;
+    border-radius: 10rem;
+}
+.loaderwapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(204, 218, 209);
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    color: black;
+    font-size: 45px;
+    text-indent: -9999em;
+    overflow: hidden;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: relative;
+    transform: translateZ(0);
+    animation: mltShdSpin 1.7s infinite ease, round 1.7s infinite ease;
+}
+.content{
+    display: none;
+}
+
+@keyframes mltShdSpin {
+    0% {
+        box-shadow: 0 -0.83em 0 -0.4em,
+            0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+            0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+
+    5%,
+    95% {
+        box-shadow: 0 -0.83em 0 -0.4em,
+            0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+            0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+
+    10%,
+    59% {
+        box-shadow: 0 -0.83em 0 -0.4em,
+            -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em,
+            -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+    }
+
+    20% {
+        box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em,
+            -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em,
+            -0.749em -0.34em 0 -0.477em;
+    }
+
+    38% {
+        box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em,
+            -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em,
+            -0.82em -0.09em 0 -0.477em;
+    }
+
+    100% {
+        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em,
+            0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+}
+
+@keyframes round {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* responsive deisgn */
+
+@media screen and (max-width:426px) {
+    .container {
+        max-width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .aside-left{
+        height: 100vh;
+        width: 100%;
+        z-index: 1;
+        background-color: rgba(66, 61, 61, 0.85);
+        margin: 0;
+    }
+    .info h3 {
+        font-size: 2.4rem;
+        margin: 18rem 7rem 0 7rem;
+        width: 100%;
+    }
+    .info h1 {
+        font-size: 2rem;
+        margin: 0rem 0.5rem;
+        width: 100%;
+    }
+    .info h4 {
+        max-width: 4rem;
+        font-size: 1.3rem;
+        background-color: #6F6866;
+        margin: 0.1rem 5rem 10rem 5rem;
+    }
+    .more-about button {
+        padding: 1rem 1rem;
+        width: 17rem;
+        margin: 1rem 4rem ;
+    }
+    .info p {
+        display: none;
+    }
+
+    .image-right {
+        height: 100vh;
+        position: absolute;
+        top: 0rem;
+    }
+
+    .info h4 {
+        max-width: 17rem;
+    }
+
+    .icons {
+        position: absolute;
+        top: 7%;
+        right: 2%;
+        max-width: 3rem;
+        display: none;
+    }
+
+    .icons a img {
+        max-width: 2.3rem;
+        margin: 1rem 0.5rem;
+        display: block;
+    }
+    .burgerlist{
+        display: block;
+    }
+    .show{
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+@media screen and (max-width:768px) {
+    .container {
+        max-width: 100%;
+        height: 100vh;
+    }
+    .image-right {
+        height: 100vh;
+    }
+    .info h4 {
+        max-width: 17rem;
+    }
+    icons {
+        position: absolute;
+        top: 25%;
+        right: 1%;
+        max-width: 3rem;
+    }
+    .icons a img{
+        max-width: 2.3rem;
+        margin: 1rem 0.5rem;
+    }
+}
+
+
+
+
+@media screen and (max-width:1024px) {
+    .container {
+        max-width: 100%;
+        height: 100vh;
+    }
+
+    .image-right {
+        height: 100vh;
+    }
+}

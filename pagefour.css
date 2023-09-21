@@ -1,0 +1,338 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
+/* loading screen */
+.loaderwapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(204, 218, 209);
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    color: black;
+    font-size: 45px;
+    text-indent: -9999em;
+    overflow: hidden;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    position: relative;
+    transform: translateZ(0);
+    animation: mltShdSpin 1.7s infinite ease, round 1.7s infinite ease;
+}
+
+.content {
+    display: none;
+}
+
+@keyframes mltShdSpin {
+    0% {
+        box-shadow: 0 -0.83em 0 -0.4em,
+            0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+            0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+
+    5%,
+    95% {
+        box-shadow: 0 -0.83em 0 -0.4em,
+            0 -0.83em 0 -0.42em, 0 -0.83em 0 -0.44em,
+            0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+
+    10%,
+    59% {
+        box-shadow: 0 -0.83em 0 -0.4em,
+            -0.087em -0.825em 0 -0.42em, -0.173em -0.812em 0 -0.44em,
+            -0.256em -0.789em 0 -0.46em, -0.297em -0.775em 0 -0.477em;
+    }
+
+    20% {
+        box-shadow: 0 -0.83em 0 -0.4em, -0.338em -0.758em 0 -0.42em,
+            -0.555em -0.617em 0 -0.44em, -0.671em -0.488em 0 -0.46em,
+            -0.749em -0.34em 0 -0.477em;
+    }
+
+    38% {
+        box-shadow: 0 -0.83em 0 -0.4em, -0.377em -0.74em 0 -0.42em,
+            -0.645em -0.522em 0 -0.44em, -0.775em -0.297em 0 -0.46em,
+            -0.82em -0.09em 0 -0.477em;
+    }
+
+    100% {
+        box-shadow: 0 -0.83em 0 -0.4em, 0 -0.83em 0 -0.42em,
+            0 -0.83em 0 -0.44em, 0 -0.83em 0 -0.46em, 0 -0.83em 0 -0.477em;
+    }
+}
+
+@keyframes round {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 0.8fr 1fr 1fr 1fr;
+    grid-template-rows: 1.2fr 0.2fr 1.6fr;
+    grid-template-areas:
+        "profile contact contact contact"
+        "list contact contact contact"
+        "list email phone phone";
+    background-color: #ccdad1;
+
+
+}
+
+.profile {
+    grid-area: profile;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.contact {
+    grid-area: contact;
+}
+
+.contact h1 {
+    font-size: 12rem;
+    text-align: center;
+    margin-top: 8rem;
+    color: black;
+}
+
+.list {
+    grid-area: list;
+    background-color: #6F6866;
+}
+
+.list ul li {
+    text-decoration: none;
+    list-style: none;
+    margin: 3rem 1.5rem;
+
+}
+
+.list ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 2rem;
+}
+
+.list ul li a:hover {
+    color: #ccdad1;
+}
+
+.email{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10rem;
+}
+.email-image{
+    width: 5rem;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    
+}
+.email-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.phonenumber {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 0.5fr 1.5fr;
+    grid-template-rows: 1fr;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15rem;
+}
+
+.phonenumber-image {
+    width: 5rem;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+}
+
+.phonenumber-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+@media screen and (max-width:1024px) {
+
+
+    .contact h1 {
+        font-size: 9rem;
+        text-align: center;
+        margin-top: 7rem;
+        color: black;
+    }
+        .phonenumber,.email {
+        margin-left: 7rem;
+    }
+    .list ul li {
+        text-decoration: none;
+        list-style: none;
+        margin: 3rem 1rem;
+
+    }
+
+    .list ul li a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.5rem;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+
+
+    .contact h1 {
+        font-size: 6rem;
+        text-align: center;
+        margin-top: 6rem;
+        color: black;
+    }
+
+    .phonenumber,
+    .email {
+        margin-left: 5rem;
+    }
+
+    .list ul li {
+        text-decoration: none;
+        list-style: none;
+        margin: 3rem 1rem;
+
+    }
+
+    .list ul li a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.5rem;
+    }
+    .phonenumber-image, .email-image {
+        width: 3rem;
+        aspect-ratio: 1/1;
+        overflow: hidden;
+    }
+    .phonenumber, .email p{
+        font-size: 0.8rem;
+    }
+}
+
+
+@media screen and (max-width:435px) {
+
+    .container {
+        height: 100vh;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 3fr 3fr 1fr 1fr;
+        grid-template-areas:
+            "list"
+            "profile"
+            "contact"
+            "email"
+            "phone";
+            background-color: white;
+    }
+    .contact h1 {
+        font-size: 4rem;
+        text-align: center;
+        margin-top: 6rem;
+        color: black;
+    }
+    .profile{
+        height: 20rem;
+        
+    }
+
+    .phonenumber,
+    .email {
+        margin-left: 1rem;
+    }
+
+    .list ul li {
+        text-decoration: none;
+        list-style: none;
+        margin: 3rem 1rem;
+
+    }
+
+    .list ul li a {
+        text-decoration: none;
+        color: black;
+        font-size: 1rem;
+    }
+
+    .phonenumber-image,
+    .email-image {
+        width: 3rem;
+        aspect-ratio: 1/1;
+        overflow: hidden;
+    }
+
+    .phonenumber,
+    .email p {
+        font-size: 0.7rem;
+        margin-right: 0rem;
+    }
+    .list{
+text-align: center;
+max-width: 100%;
+        
+    }
+
+}
